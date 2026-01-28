@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Xash3D-FWGS-AppImage)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/pkgforge-dev.png" width="128" />
+  <img src="https://github.com/FWGS/xash3d-fwgs/blob/master/game_launch/icon-xash-material.png" width="128" />
 </p>
 
 
