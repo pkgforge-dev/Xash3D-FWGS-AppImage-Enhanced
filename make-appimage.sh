@@ -13,9 +13,9 @@ export DESKTOP=/usr/share/applications/xash3d.desktop
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/xash3d
-mv /opt/xash3d/* ./AppDir/bin
-echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
+quick-sharun /usr/bin/xash3d /opt/xash3d/*
+#mv /opt/xash3d/* ./AppDir/bin
+#echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 
