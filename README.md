@@ -1,10 +1,10 @@
 <div align="center">
 
-# Xash3D-FWGS-AppImage 🐧
+# Xash3D-FWGS-AppImage-Enhanced 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Xash3D-FWGS-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/Xash3D-FWGS-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Xash3D-FWGS-AppImage)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced)](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced/releases/latest)
 
 <p align="center">
   <img src="https://github.com/FWGS/xash3d-fwgs/blob/master/game_launch/icon-xash-material.png" width="128" />
@@ -13,7 +13,7 @@
 
 | Latest Nightly Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage/releases/latest) | [Click here](https://github.com/FWGS/xash3d-fwgs) |
+| [Click here](https://github.com/pkgforge-dev/Xash3D-FWGS-AppImage-Enhanced/releases/latest) | [Click here](https://github.com/FWGS/xash3d-fwgs) |
 
 </div>
 
