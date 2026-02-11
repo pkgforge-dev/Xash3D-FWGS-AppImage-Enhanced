@@ -1,4 +1,4 @@
 dir=${XDG_DATA_HOME:-~/.xash3d}
 mkdir -p "$dir"
 cd "$dir"
-export XASH3D_BASEDIR=dir
+export XASH3D_BASEDIR=$dir
