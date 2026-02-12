@@ -8,12 +8,12 @@ export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/usr/share/pixmaps/xash-material.png
+export ICON=https://raw.githubusercontent.com/FWGS/xash3d-fwgs/refs/heads/master/game_launch/icon-xash-material.png
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/xash3d /opt/xash3d/*
-mv -v /opt/xash3d/valve/extras.pk3 ./AppDir/bin
+quick-sharun /opt/xash3d/*
+mv -v /opt/xash3d/extras.pk3 ./AppDir/bin
 #mv /opt/xash3d/* ./AppDir/bin
 #echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
