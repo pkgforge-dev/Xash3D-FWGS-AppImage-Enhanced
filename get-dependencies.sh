@@ -38,5 +38,6 @@ mv -v game_launch/xash3d /opt/xash3d
 mv -v filesystem/filesystem_stdio.so /opt/xash3d
 mv -v engine/libxash.so /opt/xash3d
 mv -v 3rdparty/mainui/libmenu.so /opt/xash3d
+mv -v 3rdparty/extras/extras.pk3 /opt/xash3d
 mv -v ref/gl/libref_gl.so /opt/xash3d
 mv -v ref/soft/libref_soft.so /opt/xash3d
