@@ -1,4 +1,7 @@
 dir=${XDG_DATA_HOME:-~/.xash3d}
-mkdir -p "$dir"
+if [ ! -f "dir"/extras.pk3 ]; then
+  mkdir -p "$dir"
+  cp -r "$APPDIR"/bin/extras.pk3 "$dir"
+fi
 cd "$dir"
 export XASH3D_BASEDIR=$dir
