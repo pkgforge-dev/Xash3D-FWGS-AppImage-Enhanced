@@ -51,12 +51,11 @@ cd ./hlsdk-portable
 #make -j$(nproc)
 ./waf configure -T release -8
 ./waf
-
 case "$ARCH" in # they use AMD64 and ARM64 for libs
 	x86_64)  lib_arch=amd64;;
 	aarch64) lib_arch=arm64;;
 esac
-mv -v cl_dll/client_$lib_arch.so /opt/xash3d
-mv -v dlls/hl_$lib_arch.so /opt/xash3d
+mv -v build/cl_dll/client_$lib_arch.so /opt/xash3d
+mv -v build/dlls/hl_$lib_arch.so /opt/xash3d
 
 
