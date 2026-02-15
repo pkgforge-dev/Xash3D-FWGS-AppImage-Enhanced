@@ -41,14 +41,11 @@ mv -v 3rdparty/extras/extras.pk3 /opt/xash3d
 mv -v ref/gl/libref_gl.so /opt/xash3d
 mv -v ref/soft/libref_soft.so /opt/xash3d
 
+echo "Making nightly build of Portable Half-Life SDK..."
+echo "---------------------------------------------------------------"
 # hlsdk-portable Libs required to make half-life 1 base game to work
 git clone --recursive --depth 1 https://github.com/FWGS/hlsdk-portable ./hlsdk-portable
 cd ./hlsdk-portable
-#mkdir -p build && cd build
-#cmake .. \
-#    -DCMAKE_BUILD_TYPE=Release \
-#    -D64BIT=1
-#make -j$(nproc)
 ./waf configure -T release -8
 ./waf
 case "$ARCH" in # they use AMD64 and ARM64 for libs
