@@ -11,9 +11,9 @@ if [ ! -f "dir"/extras.pk3 ]; then
   cp -r "$APPDIR"/bin/extras.pk3 "$dir"
 fi
 if [ ! -f "dir"/valve/cl_dll/client_$lib_arch.so ]; then
-  mkdir -p "$dir"/valve/cl_dll
+  mkdir -p "$dir"/valve/cl_dlls
   mkdir -p "$dir"/valve/dlls
-  cp -r "$APPDIR"/bin/client_$lib_arch.so "$dir"/valve/cl_dll
+  cp -r "$APPDIR"/bin/client_$lib_arch.so "$dir"/valve/cl_dlls
   cp -r "$APPDIR"/bin/hl_$lib_arch.so "$dir"/valve/dlls
 fi
 cd "$dir"
