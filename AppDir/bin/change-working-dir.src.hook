@@ -1,7 +1,18 @@
+#!/bin/bash
+
+case "$ARCH" in
+	x86_64)  lib_arch=amd64;;
+	aarch64) lib_arch=arm64;;
+esac
+
 dir=${XDG_DATA_HOME:-~/.xash3d}
 if [ ! -f "dir"/extras.pk3 ]; then
   mkdir -p "$dir"
   cp -r "$APPDIR"/bin/extras.pk3 "$dir"
+fi
+if [ ! -f "dir"/valve/cl_dll/client_$lib_arch.so ]; then
+  cp -r "$APPDIR"/bin/client_$lib_arch.so "$dir"/valve/cl_dll
+  cp -r "$APPDIR"/bin/hl_$lib_arch.so "$dir"/valve/dlls
 fi
 cd "$dir"
 export XASH3D_BASEDIR=$dir
