@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ARCH=$(uname -m)
+
 case "$ARCH" in
 	x86_64)  lib_arch=amd64;;
 	aarch64) lib_arch=arm64;;
