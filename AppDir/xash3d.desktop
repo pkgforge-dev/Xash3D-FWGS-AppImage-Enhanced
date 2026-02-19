@@ -5,4 +5,5 @@ Comment=A custom GoldSrc engine implementation
 Exec=xash3d
 Icon=icon-xash-material
 Terminal=false
+StartupWMClass=xash3d
 Categories=Game;Action
