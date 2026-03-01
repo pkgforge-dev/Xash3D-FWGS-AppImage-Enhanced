@@ -8,11 +8,11 @@ case "$ARCH" in
 esac
 
 dir=$HOME/.xash3d
-if [ ! -f "dir"/extras.pk3 ]; then
+if [ ! -f "$dir"/extras.pk3 ]; then
   mkdir -p "$dir"
   cp "$APPDIR"/bin/extras.pk3 "$dir"
 fi
-if [ ! -f "dir"/valve/cl_dlls/client_$lib_arch.so ]; then
+if [ ! -f "$dir"/valve/cl_dlls/client_$lib_arch.so ]; then
   mkdir -p "$dir"/valve/cl_dlls
   mkdir -p "$dir"/valve/dlls
   cp "$APPDIR"/shared/lib/xash3d/client_$lib_arch.so "$dir"/valve/cl_dlls
