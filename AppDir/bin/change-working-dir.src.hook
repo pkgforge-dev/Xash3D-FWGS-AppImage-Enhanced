@@ -1,8 +1,6 @@
 #!/bin/false
 
-ARCH=$(uname -m)
-
-case "$ARCH" in
+case "$APPIMAGE_ARCH" in
 	x86_64)  lib_arch=amd64;;
 	aarch64) lib_arch=arm64;;
 esac
@@ -12,11 +10,11 @@ if [ ! -f "$dir"/extras.pk3 ]; then
   mkdir -p "$dir"
   cp "$APPDIR"/bin/extras.pk3 "$dir"
 fi
-if [ ! -f "$dir"/valve/cl_dlls/client_$lib_arch.so ]; then
+if [ ! -f "$dir"/valve/cl_dlls/client_${lib_arch}.so ]; then
   mkdir -p "$dir"/valve/cl_dlls
   mkdir -p "$dir"/valve/dlls
-  cp "$APPDIR"/shared/lib/xash3d/client_$lib_arch.so "$dir"/valve/cl_dlls
-  cp "$APPDIR"/shared/lib/xash3d/hl_$lib_arch.so "$dir"/valve/dlls
+  cp "$APPDIR"/shared/lib/xash3d/client_${lib_arch}.so "$dir"/valve/cl_dlls
+  cp "$APPDIR"/shared/lib/xash3d/hl_${lib_arch}.so "$dir"/valve/dlls
 fi
 cd "$dir"
 export XASH3D_BASEDIR=$dir
