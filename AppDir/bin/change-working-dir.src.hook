@@ -5,8 +5,8 @@ case "$APPIMAGE_ARCH" in
 esac
 
 dir=$HOME/.xash3d
+mkdir -p "$dir"
 if [ ! -f "$dir"/extras.pk3 ]; then
-  mkdir -p "$dir"
   cp "$APPDIR"/bin/extras.pk3 "$dir"
 fi
 if [ ! -f "$dir"/valve/cl_dlls/client_${lib_arch}.so ]; then
