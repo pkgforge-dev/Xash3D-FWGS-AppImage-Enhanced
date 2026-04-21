@@ -17,7 +17,7 @@
 
 </div>
 
-## ⚠️ Place `valve` directory from Half-life game to `~/.xash3d` ⚠️
+## ⚠️ Place `valve` directory from Half-life game in `~/.xash3d` ⚠️
 
 ---
 
