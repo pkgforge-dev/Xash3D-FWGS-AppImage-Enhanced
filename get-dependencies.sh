@@ -6,44 +6,30 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-    fontconfig \
-    libdecor   \
-    python     \
-    sdl2
+pacman -Syu --noconfirm fontconfig sdl3
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
-# Comment this out if you need an AUR package
-#make-aur-package
-
-# If the application needs to be manually built that has to be done down here
-echo "Making nightly build of Xash3D-FWGS..."
+echo "Building Xash3D-FWGS..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/FWGS/xash3d-fwgs"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
 git clone --recursive --depth 1 "$REPO" ./xash3d-fwgs
 echo "$VERSION" > ~/version
 
-mkdir -p /opt/xash3d
+mkdir -p ./AppDir/bin
 cd ./xash3d-fwgs
-./waf configure -8 -T release --enable-lto --enable-poly-opt
+./waf configure -3 -8 -T release --enable-lto --enable-poly-opt
 ./waf build
-mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so /opt/xash3d
-cd build
-mv -v game_launch/xash3d /opt/xash3d
-mv -v filesystem/filesystem_stdio.so /opt/xash3d
-mv -v engine/libxash.so /opt/xash3d
-mv -v 3rdparty/mainui/libmenu.so /opt/xash3d
-mv -v 3rdparty/extras/extras.pk3 /opt/xash3d
-mv -v ref/gl/libref_gl.so /opt/xash3d
-mv -v ref/soft/libref_soft.so /opt/xash3d
+#mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so build/3rdparty/extras/extras.pk3 build/3rdparty/mainui/libmenu.so \
+mv -v build/3rdparty/extras/extras.pk3 build/3rdparty/mainui/libmenu.so \
+build/engine/libxash.so build/filesystem/filesystem_stdio.so build/game_launch/xash3d build/ref/gl/libref_gl.so ../AppDir/bin
 
-echo "Making nightly build of Portable Half-Life SDK..."
+echo "Building Portable Half-Life SDK..."
 echo "---------------------------------------------------------------"
-# hlsdk-portable Libs required to make half-life 1 base game to work
+# hlsdk-portable Libs required for Half-Life based games to work
 git clone --recursive --depth 1 https://github.com/FWGS/hlsdk-portable ./hlsdk-portable
 cd ./hlsdk-portable
 ./waf configure -T release -8
@@ -52,7 +38,4 @@ case "$ARCH" in # they use AMD64 and ARM64 for libs
 	x86_64)  lib_arch=amd64;;
 	aarch64) lib_arch=arm64;;
 esac
-mv -v build/cl_dll/client_$lib_arch.so /opt/xash3d
-mv -v build/dlls/hl_$lib_arch.so /opt/xash3d
-
-
+mv -v build/cl_dll/client_$lib_arch.so build/dlls/hl_$lib_arch.so ../../AppDir/bin
