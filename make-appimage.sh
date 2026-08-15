@@ -14,7 +14,5 @@ export DEPLOY_OPENGL=1
 quick-sharun /opt/xash3d/*
 mv -v /opt/xash3d/extras.pk3 ./AppDir/bin
 
-# Additional changes can be done in between here
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
