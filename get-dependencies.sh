@@ -16,7 +16,7 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-echo "Making nightly build of Xash3D-FWGS..."
+echo "Building Xash3D-FWGS..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/FWGS/xash3d-fwgs"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
@@ -37,7 +37,7 @@ mv -v 3rdparty/extras/extras.pk3 /opt/xash3d
 mv -v ref/gl/libref_gl.so /opt/xash3d
 mv -v ref/soft/libref_soft.so /opt/xash3d
 
-echo "Making nightly build of Portable Half-Life SDK..."
+echo "Building Portable Half-Life SDK..."
 echo "---------------------------------------------------------------"
 # hlsdk-portable Libs required to make half-life 1 base game to work
 git clone --recursive --depth 1 https://github.com/FWGS/hlsdk-portable ./hlsdk-portable
