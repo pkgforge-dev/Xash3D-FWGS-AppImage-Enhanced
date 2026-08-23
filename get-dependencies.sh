@@ -8,13 +8,11 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     fontconfig \
-    libdecor   \
-    python     \
     sdl2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
 echo "Building Xash3D-FWGS..."
 echo "---------------------------------------------------------------"
