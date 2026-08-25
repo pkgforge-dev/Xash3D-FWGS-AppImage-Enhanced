@@ -36,7 +36,7 @@ mv -v ref/gl/libref_gl.so /opt/xash3d
 
 echo "Building Portable Half-Life SDK..."
 echo "---------------------------------------------------------------"
-# hlsdk-portable Libs required for half-life 1 base game to work
+# hlsdk-portable Libs required for Half-Life based games to work
 git clone --recursive --depth 1 https://github.com/FWGS/hlsdk-portable ./hlsdk-portable
 cd ./hlsdk-portable
 ./waf configure -T release -8
