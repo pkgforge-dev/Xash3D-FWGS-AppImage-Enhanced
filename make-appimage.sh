@@ -8,7 +8,7 @@ export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/FWGS/xash3d-fwgs/refs/heads/master/game_launch/icon-xash-material.png
-export USE_HOST_DRIVERS_EXPERIMENTAL=1
+export DEPLOY_OPENGL=1
 
 # Deploy dependencies
 quick-sharun /opt/xash3d/*
