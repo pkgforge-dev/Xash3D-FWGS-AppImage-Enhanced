@@ -8,8 +8,7 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     fontconfig \
-	sdl2 \
-    sdl3
+	sdl2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
