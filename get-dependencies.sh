@@ -6,9 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-    fontconfig \
-	sdl2
+pacman -Syu --noconfirm fontconfig sdl2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
