@@ -11,8 +11,7 @@ export ICON=https://raw.githubusercontent.com/FWGS/xash3d-fwgs/refs/heads/master
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /opt/xash3d/*
-mv -v /opt/xash3d/extras.pk3 ./AppDir/bin
+quick-sharun ./AppDir/bin/*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
