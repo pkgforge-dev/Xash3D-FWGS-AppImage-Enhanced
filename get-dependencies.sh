@@ -21,13 +21,13 @@ VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
 git clone --recursive --depth 1 "$REPO" ./xash3d-fwgs
 echo "$VERSION" > ~/version
 
-mkdir -p /opt/xash3d
+mkdir -p ./AppDir/bin
 cd ./xash3d-fwgs
 ./waf configure -8 -T release --enable-lto --enable-poly-opt
 ./waf build
-mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so /opt/xash3d
+mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so ../AppDir/bin
 cd build
-mv -v 3rdparty/extras/extras.pk3 3rdparty/mainui/libmenu.so engine/libxash.so filesystem/filesystem_stdio.so game_launch/xash3d ref/gl/libref_gl.so /opt/xash3d
+mv -v 3rdparty/extras/extras.pk3 3rdparty/mainui/libmenu.so engine/libxash.so filesystem/filesystem_stdio.so game_launch/xash3d ref/gl/libref_gl.so ../../AppDir/bin
 
 echo "Building Portable Half-Life SDK..."
 echo "---------------------------------------------------------------"
@@ -40,5 +40,4 @@ case "$ARCH" in # they use AMD64 and ARM64 for libs
 	x86_64)  lib_arch=amd64;;
 	aarch64) lib_arch=arm64;;
 esac
-mv -v build/cl_dll/client_$lib_arch.so /opt/xash3d
-mv -v build/dlls/hl_$lib_arch.so /opt/xash3d
+mv -v build/cl_dll/client_$lib_arch.so build/dlls/hl_$lib_arch.so ../../../AppDir/bin
