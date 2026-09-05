@@ -27,12 +27,7 @@ cd ./xash3d-fwgs
 ./waf build
 mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so /opt/xash3d
 cd build
-mv -v game_launch/xash3d /opt/xash3d
-mv -v filesystem/filesystem_stdio.so /opt/xash3d
-mv -v engine/libxash.so /opt/xash3d
-mv -v 3rdparty/mainui/libmenu.so /opt/xash3d
-mv -v 3rdparty/extras/extras.pk3 /opt/xash3d
-mv -v ref/gl/libref_gl.so /opt/xash3d
+mv -v 3rdparty/extras/extras.pk3 3rdparty/mainui/libmenu.so engine/libxash.so filesystem/filesystem_stdio.so game_launch/xash3d ref/gl/libref_gl.so /opt/xash3d
 
 echo "Building Portable Half-Life SDK..."
 echo "---------------------------------------------------------------"
@@ -47,5 +42,3 @@ case "$ARCH" in # they use AMD64 and ARM64 for libs
 esac
 mv -v build/cl_dll/client_$lib_arch.so /opt/xash3d
 mv -v build/dlls/hl_$lib_arch.so /opt/xash3d
-
-
