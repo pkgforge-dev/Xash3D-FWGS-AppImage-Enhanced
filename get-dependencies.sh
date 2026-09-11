@@ -23,7 +23,8 @@ mkdir -p ./AppDir/bin
 cd ./xash3d-fwgs
 ./waf configure -3 -8 -T release --enable-lto --enable-poly-opt
 ./waf build
-mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so build/3rdparty/extras/extras.pk3 build/3rdparty/mainui/libmenu.so \
+#mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so build/3rdparty/extras/extras.pk3 build/3rdparty/mainui/libmenu.so \
+mv -v build/3rdparty/extras/extras.pk3 build/3rdparty/mainui/libmenu.so \
 build/engine/libxash.so build/filesystem/filesystem_stdio.so build/game_launch/xash3d build/ref/gl/libref_gl.so ../AppDir/bin
 
 echo "Building Portable Half-Life SDK..."
