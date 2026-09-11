@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm fontconfig sdl2-compat
+pacman -Syu --noconfirm fontconfig sdl3
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
@@ -21,7 +21,7 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./xash3d-fwgs
-./waf configure -8 -T release --enable-lto --enable-poly-opt
+./waf configure -8 -T -3 release --enable-lto --enable-poly-opt
 ./waf build
 mv -v 3rdparty/vgui_support/vgui-dev/lib/vgui.so build/3rdparty/extras/extras.pk3 build/3rdparty/mainui/libmenu.so \
 build/engine/libxash.so build/filesystem/filesystem_stdio.so build/game_launch/xash3d build/ref/gl/libref_gl.so ../AppDir/bin
